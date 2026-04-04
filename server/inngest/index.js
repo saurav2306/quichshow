@@ -24,24 +24,24 @@ const syncUserCreation = inngest.createFunction(
     }
 )
 
-//Inngest Function to delete user from database
+// Inngest Function to delete user from database
 const syncUserDeletion = inngest.createFunction(
     {id: 'delete-user-with-clerk'},
     { event: 'clerk/user.deleted' },
     async ({ event })=>{
         
-        const {id} = event.data
-        await User.findByIdAndDelete(id)
+       const {id} = event.data
+       await User.findByIdAndDelete(id)
     }
 )
 
-//Inngest Function to update user data in database
+// Inngest Function to update user data in database 
 const syncUserUpdation = inngest.createFunction(
     {id: 'update-user-from-clerk'},
     { event: 'clerk/user.updated' },
     async ({ event })=>{
-        const {id, first_name, last_name, email_addresses, image_url} = event.data
-         const userData = {
+        const { id, first_name, last_name, email_addresses, image_url } = event.data
+        const userData = {
             _id: id,
             email: email_addresses[0].email_address,
             name: first_name + ' ' + last_name,
@@ -84,7 +84,7 @@ const sendBookingConfirmationEmail = inngest.createFunction(
     async ({ event, step })=>{
         const { bookingId } = event.data;
 
-        const Booking = await Booking.findById(bookingId).populate({
+        const booking = await Booking.findById(bookingId).populate({
             path: 'show',
             populate: {path: "movie", model: "Movie"}
         }).populate('user');
@@ -215,7 +215,6 @@ const sendNewShowNotifications = inngest.createFunction(
         
     }
 )
-
 
 
 export const functions = [
