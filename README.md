@@ -1,4 +1,5 @@
-# 🎬 QuickShow – Movie Ticket Booking Website     🌐[Live Demo](https://quichshow-ja9c.vercel.app/)
+# 🎬 QuickShow – Movie Ticket Booking Website     
+🌐[Click Here to View Website](https://quichshow-ja9c.vercel.app/)
 
 A Full Stack Movie Ticket Booking Web Application built using the MERN Stack. Users can explore movies, watch trailers, and book tickets with real-time seat selection. An admin dashboard is also included to manage movies and bookings.
 
@@ -69,4 +70,4 @@ A Full Stack Movie Ticket Booking Web Application built using the MERN Stack. Us
 ---
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://github.com/apps/vercel) from the creators of Next.js.
